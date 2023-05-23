@@ -1,0 +1,123 @@
+<div class="container-fluid">
+  <div class="row bg-dark justify-content-between text-light p-2 align-items-center">
+    <div class="col-4">
+      <span (click)="home()">
+        <fa-icon [icon]="icoHouse" size="xl"></fa-icon>
+      </span>
+    </div>
+    <div class="col-4 text-center">
+      Alta Nueva Asignación
+    </div>
+    <div class="col-4 text-end">
+      <span (click)="logout()">
+        <fa-icon [icon]="icoLogout" size="xl"></fa-icon>
+      </span>
+    </div>
+  </div>
+
+  <div class="row text-center">
+    <div class="col-12 bg-dark bg-opacity-75 text-light p-2">
+      1. Ficha general de crédito
+    </div>
+    <div class="col-12 text-center p-2">
+      1/5
+    </div>
+  </div>
+</div>
+
+<div class="container">
+  <fieldset class="border p-2 mb-5 text-primary">
+    <legend class="float-none w-auto fs-6 fw-bold">1.1 Información general</legend>
+    <div class="row">
+      <div class="col-12">
+
+        <form autocomplete="off">
+
+          <div class="form-floating mb-3">
+            <input type="date" class="form-control" id="inputFechaSolicitud" placeholder="1. Fecha solicitud WO">
+            <label for="inputFechaSolicitud">1. Fecha solicitud WO</label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="inputGrupoEconomico" placeholder="2. Grupo Económico">
+            <label for="inputGrupoEconomico">2. Grupo Económico <fa-icon [icon]="icoQuestion"></fa-icon></label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select class="form-select" id="selectAcreditados">
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <label for="selectAcreditados">3. N. de Acréditados <fa-icon [icon]="icoQuestion"></fa-icon></label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="inputAcreditado" placeholder="4. Acréditado 1">
+            <label for="inputAcreditado">4. Acréditado 1 <fa-icon [icon]="icoQuestion"></fa-icon></label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="inputOrigenAdeudo" placeholder="5. CR Origen Adeudo" disabled>
+            <label for="inputOrigenAdeudo">5. CR Origen Adeudo <fa-icon [icon]="icoQuestion"></fa-icon></label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <input type="text" class="form-control" id="inputNumeroCredito" placeholder="6. Número de Crédito" disabled>
+            <label for="inputNumeroCredito">6. Número de Crédito <fa-icon [icon]="icoQuestion"></fa-icon></label>
+          </div>
+
+          <div class="form-floating mb-3">
+            <select class="form-select" id="selectTipoCreditoAdeudo">
+              <option selected value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+            </select>
+            <label for="selectTipoCreditoAdeudo">7. Tipo de Crédito o Adeudo <fa-icon
+                [icon]="icoQuestion"></fa-icon></label>
+          </div>
+
+          <div class="row">
+            <div class="col-12 col-lg-4">
+              <div class="form-floating mb-3">
+                <select class="form-select" id="selectDivisionWO">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <label for="selectDivisionWO">8. División Work Out <fa-icon [icon]="icoQuestion"></fa-icon></label>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-floating mb-3">
+                <select class="form-select" id="selectEjecutivoWO">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <label for="selectEjecutivoWO">9. Ejecutivo Work Out <fa-icon [icon]="icoQuestion"></fa-icon></label>
+              </div>
+            </div>
+            <div class="col-12 col-lg-4">
+              <div class="form-floating mb-3">
+                <select class="form-select" id="selectAbogadoInterno">
+                  <option selected value="1">1</option>
+                  <option value="2">2</option>
+                  <option value="3">3</option>
+                </select>
+                <label for="selectAbogadoInterno">10. Abogado Interno</label>
+              </div>
+            </div>
+          </div>
+
+          <div class="d-grid gap-2 d-flex justify-content-between mb-3">
+            <button class="btn btn-primary" type="button" (click)="validarForm()">Siguiente</button>
+            <button class="btn btn-primary" type="button" (click)="cancelarForm()">Cancelar</button>
+          </div>
+
+        </form>
+
+      </div>
+    </div>
+  </fieldset>
+</div>
